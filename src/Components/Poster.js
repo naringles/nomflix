@@ -1,6 +1,6 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -8,12 +8,12 @@ const Container = styled.div`
 `;
 
 const Image = styled.div`
-  background-image: url(${props => props.bgUrl});
-  height: 180px;
+  background-image: url(${(props) => props.bgUrl});
   background-size: cover;
-  border-radius: 4px;
   background-position: center center;
-  transition: opacity 0.1s linear;
+  border-radius: 4px;
+  height: 180px;
+  transition: opacity 0.2s linear;
 `;
 
 const Rating = styled.span`
@@ -21,7 +21,7 @@ const Rating = styled.span`
   right: 5px;
   position: absolute;
   opacity: 0;
-  transition: opacity 0.1s linear;
+  transition: opacity 0.2s linear;
 `;
 
 const ImageContainer = styled.div`
@@ -58,12 +58,12 @@ const Poster = ({ id, imageUrl, title, rating, year, isMovie = false }) => (
               : require("../assets/noPosterSmall.png")
           }
         />
-
         <Rating>
           <span role="img" aria-label="rating">
-            ⭐️
+            &#11088;
           </span>{" "}
-          {rating}/10
+          {rating}
+          /10
         </Rating>
       </ImageContainer>
       <Title>
@@ -80,7 +80,7 @@ Poster.propTypes = {
   title: PropTypes.string.isRequired,
   rating: PropTypes.number,
   year: PropTypes.string,
-  isMovie: PropTypes.bool
+  isMovie: PropTypes.bool,
 };
 
 export default Poster;

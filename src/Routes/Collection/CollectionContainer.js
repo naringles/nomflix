@@ -1,18 +1,15 @@
 import React from "react";
-import DetailPresenter from "./DetailPresenter";
-import { MoviesApi, TVApi } from "api";
+import CollectionPresenter from "./CollectionPresenter";
+import { CollectionApi } from "../../api";
 
 export default class extends React.Component {
   constructor(props) {
     super(props);
-    const {
-      location: { pathname },
-    } = props;
+
     this.state = {
       result: null,
       error: null,
       loading: true,
-      isMovie: pathname.includes("/movie/"),
     };
   }
 
@@ -23,20 +20,19 @@ export default class extends React.Component {
       },
       history: { push },
     } = this.props;
-    const { isMovie } = this.state;
+
+    // check id is number
     const parsedId = parseInt(id);
     if (isNaN(parsedId)) {
       return push("/");
     }
+
     let result = null;
     try {
-      if (isMovie) {
-        ({ data: result } = await MoviesApi.movieDetail(parsedId));
-      } else {
-        ({ data: result } = await TVApi.showDetail(parsedId));
-      }
-    } catch {
-      this.setState({ error: "Can't find anything." });
+      ({ data: result } = await CollectionApi.collectionDetail(parsedId));
+      console.log(result);
+    } catch (error) {
+      this.setState({ error: "Can't found that Collection" });
     } finally {
       this.setState({ loading: false, result });
     }
@@ -44,6 +40,8 @@ export default class extends React.Component {
 
   render() {
     const { result, error, loading } = this.state;
-    return <DetailPresenter result={result} error={error} loading={loading} />;
+    return (
+      <CollectionPresenter result={result} error={error} loading={loading} />
+    );
   }
 }

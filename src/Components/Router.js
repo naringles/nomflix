@@ -3,15 +3,16 @@ import {
   HashRouter as Router,
   Route,
   Redirect,
-  Switch
+  Switch,
 } from "react-router-dom";
+import Header from "Components/Header";
 import Home from "Routes/Home";
 import TV from "Routes/TV";
-import Header from "Components/Header";
 import Search from "Routes/Search";
 import Detail from "Routes/Detail";
+import Collection from "Routes/Collection";
 
-export default () => (
+const router = () => (
   <Router>
     <>
       <Header />
@@ -21,8 +22,11 @@ export default () => (
         <Route path="/search" component={Search} />
         <Route path="/movie/:id" component={Detail} />
         <Route path="/show/:id" component={Detail} />
+        <Route path="/collection/:id" component={Collection} />
         <Redirect from="*" to="/" />
       </Switch>
     </>
   </Router>
 );
+
+export default router;

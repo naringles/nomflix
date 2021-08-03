@@ -17,7 +17,7 @@ const Loader = () => (
       <title>Loading... | Nomfilx</title>
     </Helmet>
     <span role="img" aria-label="Loading">
-      :alarm_clock:
+      &#9200;
     </span>
   </Container>
 );
