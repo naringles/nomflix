@@ -8,8 +8,8 @@ const Container = styled.div`
   justify-content: center;
 `;
 
-const Text = styled.span`
-  color: ${props => props.color};
+const Text = styled.div`
+  color: ${(props) => props.color};
 `;
 
 const Message = ({ text, color }) => (
@@ -20,7 +20,7 @@ const Message = ({ text, color }) => (
 
 Message.propTypes = {
   text: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired
+  color: PropTypes.string.isRequired,
 };
 
 export default Message;

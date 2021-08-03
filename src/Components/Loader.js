@@ -1,4 +1,5 @@
 import React from "react";
+import Helmet from "react-helmet";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -10,10 +11,15 @@ const Container = styled.div`
   margin-top: 20px;
 `;
 
-export default () => (
+const Loader = () => (
   <Container>
+    <Helmet>
+      <title>Loading... | Nomfilx</title>
+    </Helmet>
     <span role="img" aria-label="Loading">
-      ⏰
+      :alarm_clock:
     </span>
   </Container>
 );
+
+export default Loader;
