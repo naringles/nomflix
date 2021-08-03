@@ -130,6 +130,7 @@ const SeasonsGrid = styled.div`
 const MadeBy = styled.div`
   display: flex;
   margin-bottom: 30px;
+  flex-direction: column;
 `;
 
 const VideoContainer = styled.div`
@@ -281,7 +282,6 @@ const DetailPresenter = ({ result, loading, error }) =>
               </>
             )}
           <MadeBy>
-            {/* production_companies */}
             {result.production_companies &&
               result.production_companies.length > 0 && (
                 <>
@@ -289,7 +289,6 @@ const DetailPresenter = ({ result, loading, error }) =>
                   <Profile result={result.production_companies} />
                 </>
               )}
-            {/* created_by */}
             {result.created_by &&
               result.created_by.length > 0 && (
                 <>
