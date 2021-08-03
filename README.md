@@ -1,7 +1,7 @@
 # Nomflix
 
-Learning React and ES6 by building a Movie Discovery App.
-Copy fron Sandbox in my nomflix CodeSandbox.
+- Learning React and ES6 by building a Movie Discovery App.
+- Copy from nomflix Sandbox in my CodeSandbox.
 
 ## preview
 
