@@ -3,6 +3,10 @@
 Learning React and ES6 by building a Movie Discovery App.
 Copy fron Sandbox in my nomflix CodeSandbox.
 
+## preview
+
+#### [netlify](https://loving-jackson-f2e3a7.netlify.app)
+
 ## Screens
 
 - [x] Home
@@ -29,4 +33,14 @@ Copy fron Sandbox in my nomflix CodeSandbox.
 - [x] /collections Route
 - [x] On TV Show, show seasons and creators
 
-## Challenges
+## React Challenges
+
+- [Assignment 1](https://codesandbox.io/s/day-one-blueprint-forked-7pie6)
+- [Assignment 2](https://codesandbox.io/s/day-two-blueprint-forked-bcluk)
+- [Assignment 3](https://codesandbox.io/s/day-three-blueprint-forked-e93k1)
+- [Assignment 4](https://codesandbox.io/s/day-four-boilerplate-forked-jqhuy)
+- [Assignment 5](https://codesandbox.io/s/day-five-blueprint-forked-y1cm5)
+- [Assignment 6](https://codesandbox.io/s/day-six-solution-forked-cznu3)
+- [Assignment 7(Solution)](https://codesandbox.io/s/day-ten-solution-forked-1r39d)
+- [Assignment 8](https://codesandbox.io/s/day-eight-solution-forked-bp05n)
+- [Assignment 9](https://codesandbox.io/s/day-seven-blueprint-forked-pmvc7)
