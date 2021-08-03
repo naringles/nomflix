@@ -232,7 +232,6 @@ const DetailPresenter = ({ result, loading, error }) =>
             </Item>
             <Divider>•</Divider>
             <Item>
-              {/* Movies */}
               {result.production_countries &&
                 result.production_countries.map(
                   (p, i) =>
@@ -240,7 +239,6 @@ const DetailPresenter = ({ result, loading, error }) =>
                       ? p.iso_3166_1
                       : `${p.iso_3166_1} / `
                 )}
-              {/* TV Shows */}
               {result.origin_country &&
                 result.origin_country.map(
                   (c, i) =>
@@ -249,7 +247,6 @@ const DetailPresenter = ({ result, loading, error }) =>
             </Item>
           </ItemContainer>
           <Overview>{result.overview}</Overview>
-          {/* collections */}
           {result.belongs_to_collection && (
             <>
               <SubTitle>{result.belongs_to_collection.name}</SubTitle>
@@ -264,7 +261,6 @@ const DetailPresenter = ({ result, loading, error }) =>
               </ColletionContainer>
             </>
           )}
-          {/* Seasons */}
           {result.seasons &&
             result.seasons.length > 0 && (
               <>
@@ -307,7 +303,7 @@ const DetailPresenter = ({ result, loading, error }) =>
             result.videos.results &&
             result.videos.results.length > 0 && (
               <>
-                <SubTitle>YouTube Videos</SubTitle>
+                <SubTitle>Trailers</SubTitle>
                 <VideoContainer>
                   {result.videos.results.map(
                     (v) =>

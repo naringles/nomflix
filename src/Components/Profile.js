@@ -14,12 +14,12 @@ const ProfileContainer = styled.div`
   background-position: center center;
   width: 80px;
   height: 80px;
-  border-radius: 50px;
+  border-radius: 10px;
   margin-right: 10px;
 `;
 
 const ProfileTitle = styled.div`
-  color: #141414;
+  color: black;
   text-align: center;
   font-weight: 500;
   line-height: 80px;
